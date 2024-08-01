@@ -55,3 +55,14 @@ def findKthLargestnumber(numbers,k):
 
 print(findKthLargestnumber(numbers,3))
 
+# 
+
+
+def findSmallest(arr):
+
+    # Convert the array into a min-heap
+    heapq.heapify(arr)
+    
+    # Now we have a min-heap then the smallest element is at the root
+    return arr[0]
+
