@@ -1,3 +1,5 @@
+# Adding a new element in the array maintaining heap property:
+
 #Class name is Heap
 class Heap:
     def __init__(self):
@@ -36,3 +38,20 @@ max_heap.insert(55)
 max_heap.insert(55)
 
 print(max_heap.get_heap())
+
+
+# searching for Kth largest number in the array numbers:
+
+numbers = [2,1,0,10,5,4]
+
+import heapq
+
+def findKthLargestnumber(numbers,k):
+    #printing the first k largest elements array from numbers array
+    print(heapq.nlargest(k, numbers))
+
+    # After getting the array we return the kth largest element
+    return heapq.nlargest(k, numbers)[k-1]
+
+print(findKthLargestnumber(numbers,3))
+
